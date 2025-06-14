@@ -76,7 +76,7 @@
     }
 
     .hero {
-      padding: 120px 20px 60px;
+      padding: 120px 20px 20px; /* reduced bottom padding */
       text-align: center;
     }
 
@@ -118,12 +118,14 @@
       overflow: hidden;
       display: flex;
       align-items: center;
+      justify-content: center; /* center horizontally */
+      position: relative;
     }
 
     .slider {
       display: flex;
       gap: 30px;
-      padding-left: 100vw;
+      transform: translateX(100vw); /* initial offscreen */
       width: max-content;
     }
 
@@ -272,7 +274,7 @@
       .slider {
         flex-direction: column;
         gap: 20px;
-        padding-left: 0 !important;
+        transform: none !important;
         width: 100%;
       }
 
@@ -411,43 +413,42 @@
       duration: 1
     });
 
-    // Responsive scroll animation
+    // Slider animation for desktop
     function initSliderAnimation() {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       gsap.set("#slider", { clearProps: "all" });
 
       if (window.innerWidth > 768) {
-        gsap.to("#slider", {
-          x: "-100vw",
-          scrollTrigger: {
-            trigger: ".slider-section",
-            start: "top center",
-            end: "bottom top",
-            scrub: 1,
-            pin: true,
-            invalidateOnRefresh: true
+        gsap.fromTo("#slider", 
+          { x: "100vw" }, 
+          {
+            x: "0vw",
+            scrollTrigger: {
+              trigger: ".slider-section",
+              start: "top center",
+              end: "bottom top",
+              scrub: 1,
+              pin: true,
+              invalidateOnRefresh: true
+            }
           }
-        });
+        );
       }
     }
 
-    // Run once and on resize
     window.addEventListener("load", initSliderAnimation);
     window.addEventListener("resize", initSliderAnimation);
 
-    // Hamburger menu toggle
     function toggleMenu() {
       document.getElementById("navMenu").classList.toggle("active");
     }
 
-    // Close menu when link clicked
     document.querySelectorAll(".nav a").forEach(link => {
       link.addEventListener("click", () => {
         document.getElementById("navMenu").classList.remove("active");
       });
     });
 
-    // Close menu when clicking outside
     document.addEventListener("click", (e) => {
       const nav = document.getElementById("navMenu");
       const burger = document.querySelector(".hamburger");
