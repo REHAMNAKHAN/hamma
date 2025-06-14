@@ -76,7 +76,7 @@
     }
 
     .hero {
-      padding: 120px 20px 20px; /* reduced bottom padding */
+      padding: 100px 20px 20px;
       text-align: center;
     }
 
@@ -103,13 +103,13 @@
       font-weight: 700;
       color: #000;
       opacity: 0;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .hero p {
       font-size: 1.3rem;
       color: #000;
-      margin-top: 20px;
+      margin-top: 15px;
       opacity: 0;
     }
 
@@ -118,14 +118,14 @@
       overflow: hidden;
       display: flex;
       align-items: center;
-      justify-content: center; /* center horizontally */
-      position: relative;
+      justify-content: center;
+      padding: 0;
     }
 
     .slider {
       display: flex;
       gap: 30px;
-      transform: translateX(100vw); /* initial offscreen */
+      padding-left: 100vw;
       width: max-content;
     }
 
@@ -274,7 +274,7 @@
       .slider {
         flex-direction: column;
         gap: 20px;
-        transform: none !important;
+        padding-left: 0 !important;
         width: 100%;
       }
 
@@ -379,7 +379,6 @@
   </footer>
 
   <script>
-    // Animate heading
     const text = "Welcome To";
     const heading = document.getElementById("heading");
     text.split("").forEach(char => {
@@ -413,14 +412,13 @@
       duration: 1
     });
 
-    // Slider animation for desktop
     function initSliderAnimation() {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       gsap.set("#slider", { clearProps: "all" });
 
-      if (window.innerWidth > 768) {
-        gsap.fromTo("#slider", 
-          { x: "100vw" }, 
+      if (window.matchMedia("(min-width: 769px)").matches) {
+        gsap.fromTo("#slider",
+          { x: "100vw" },
           {
             x: "0vw",
             scrollTrigger: {
@@ -431,13 +429,22 @@
               pin: true,
               invalidateOnRefresh: true
             }
-          }
-        );
+          });
       }
+      ScrollTrigger.refresh();
     }
 
     window.addEventListener("load", initSliderAnimation);
-    window.addEventListener("resize", initSliderAnimation);
+    window.addEventListener("resize", () => {
+      initSliderAnimation();
+      ScrollTrigger.refresh();
+    });
+    window.addEventListener("orientationchange", () => {
+      setTimeout(() => {
+        initSliderAnimation();
+        ScrollTrigger.refresh();
+      }, 300);
+    });
 
     function toggleMenu() {
       document.getElementById("navMenu").classList.toggle("active");
