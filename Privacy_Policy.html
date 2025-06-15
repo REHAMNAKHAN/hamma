@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - HintSnap</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/links_style2.cs" />
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="static-page">
+    <h1>Privacy Policy</h1>
+    <p>At HintSnap, accessible from hintsnap.in, one of our main priorities is the privacy of our visitors. This Privacy Policy outlines how your information is collected and used.</p>
+
+    <h2>1. Log Files</h2>
+    <p>We follow standard procedures using log files, including IP addresses, browser types, date/time stamps, referring pages, and clicks — none of which are personally identifiable.</p>
+
+    <h2>2. Cookies and Web Beacons</h2>
+    <p>Like any other website, we use cookies to store information such as visitor preferences and the pages accessed.</p>
+
+    <h2>3. Google AdSense</h2>
+    <p>Some ads may be served by Google. Google's use of the DART cookie enables it to serve ads based on visits to our site and others. You may opt out by visiting the <a href="https://policies.google.com/technologies/ads" target="_blank">Google ad and content network privacy policy</a>.</p>
+
+    <h2>4. Data Usage</h2>
+    <p>We do not sell or share any personal information collected via email or forms.</p>
+
+    <h2>5. Consent</h2>
+    <p>By using our website, you consent to our Privacy Policy and agree to its terms.</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    fetch('components/header.html').then(res => res.text()).then(data => document.getElementById('header').innerHTML = data);
+    fetch('components/footer.html').then(res => res.text()).then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>

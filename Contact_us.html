@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - HintSnap</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/links_style2.cs" />
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="static-page">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Whether it's feedback, support, or suggestions — we're here to help!</p>
+
+    <h2>Email Support</h2>
+    <p>📧 Email us at <a href="mailto:support@hintsnap.in">support@hintsnap.in</a></p>
+
+    <h2>Business Inquiries</h2>
+    <p>📩 For ads, partnerships, or sponsorships, contact <a href="mailto:partner@hintsnap.in">partner@hintsnap.in</a></p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    fetch('components/header.html').then(res => res.text()).then(data => document.getElementById('header').innerHTML = data);
+    fetch('components/footer.html').then(res => res.text()).then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>

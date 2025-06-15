@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - HintSnap</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/links_style2.cs" />
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="static-page">
+    <h1>About HintSnap</h1>
+    <p>HintSnap is a daily giveaway platform where users identify numbers hidden in images to unlock exciting gift cards.</p>
+
+    <h2>What We Offer</h2>
+    <ul>
+      <li>🎁 Daily challenges with real gift card rewards</li>
+      <li>🔍 Simple puzzles: spot numbers in images</li>
+      <li>⚡ Fast reward delivery for winners</li>
+    </ul>
+
+    <h2>Our Mission</h2>
+    <p>We aim to bring joy, rewards, and interactivity to users in a fair and fun way — one gift card at a time!</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    fetch('components/header.html').then(res => res.text()).then(data => document.getElementById('header').innerHTML = data);
+    fetch('components/footer.html').then(res => res.text()).then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>
