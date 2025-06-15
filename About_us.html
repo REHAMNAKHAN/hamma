@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - HintSnap</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/links_style2.cs" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #222;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #000;
+      font-size: 1.6rem;
+      margin-top: 2.5rem;
+    }
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    li::before {
+      content: "🎯 ";
+      color: #ff5a5f;
+    }
+    .subscribe-title {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #e63946;
+    }
+    .fun-tagline {
+      margin-top: 2rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      p, li { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
-
   <div id="header"></div>
 
-  <main class="static-page">
-    <h1>About HintSnap</h1>
-    <p>HintSnap is a daily giveaway platform where users identify numbers hidden in images to unlock exciting gift cards.</p>
+  <div class="container">
+    <h1>Welcome to HintSnap</h1>
+    <p>The ultimate puzzle challenge where your eyes and speed can win you real rewards! 🧠👀</p>
 
-    <h2>What We Offer</h2>
+    <p>Every day, we post <strong>YouTube Shorts and videos</strong> with hidden numbers, words, or clues inside images. Spot them first, and you could win free gift cards! 💳</p>
+
+    <div class="subscribe-title">🔔 Why Subscribe?</div>
     <ul>
-      <li>🎁 Daily challenges with real gift card rewards</li>
-      <li>🔍 Simple puzzles: spot numbers in images</li>
-      <li>⚡ Fast reward delivery for winners</li>
+      <li>🎁 Daily giveaways</li>
+      <li>⏰ Get notified instantly when a new challenge drops</li>
+      <li>🥇 Be the first to solve and increase your chances of winning</li>
     </ul>
 
-    <h2>Our Mission</h2>
-    <p>We aim to bring joy, rewards, and interactivity to users in a fair and fun way — one gift card at a time!</p>
-  </main>
+    <p class="fun-tagline">It's fun. It's fast. It's real.<br>Subscribe now and turn your sharp eye into rewards!</p>
+  </div>
 
   <div id="footer"></div>
-
   <script src="assets/js/script.js"></script>
   <script>
-    fetch('components/header.html').then(res => res.text()).then(data => document.getElementById('header').innerHTML = data);
-    fetch('components/footer.html').then(res => res.text()).then(data => document.getElementById('footer').innerHTML = data);
+    fetch("components/header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
+    fetch("components/footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
   </script>
 </body>
 </html>
