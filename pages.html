@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HintSnap Gallery</title>
+  <link rel="stylesheet" href="assets/css/style1.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <div class="gallery" id="galleryContainer">
+    <div class="image-block">
+      <div class="image-title">Nature Landscape 1</div>
+      <img src="https://picsum.photos/400?random=1" alt="Nature Landscape 1" />
+      <div class="image-description">This is a common description shown for every image.</div>
+    </div>
+    <div class="image-block">
+      <div class="image-title">Mountain Peak View</div>
+      <img src="https://picsum.photos/400?random=2" alt="Mountain Peak View" />
+      <div class="image-description">This is a common description shown for every image.</div>
+    </div>
+  </div>
+
+  <div class="pagination" id="pagination"></div>
+
+  <div id="footer"></div>
+
+  <script src="assets/js/script1.js"></script>
+  <script>
+    // Load header and footer
+    fetch('components/header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('components/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>
