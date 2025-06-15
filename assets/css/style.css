@@ -31,7 +31,7 @@
       position: sticky;
       top: 40px;
       z-index: 998;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #fff;
     }
 
     .logo {
@@ -152,7 +152,7 @@
       color: #000;
       padding: 30px 20px;
       font-size: 0.95rem;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #ffffff;
     }
 
     .footer-container {
@@ -219,7 +219,7 @@
 
     .footer-right a {
       text-decoration: none;
-      color: #ffff;
+      color: #000;
     }
 
     @media (max-width: 768px) {
