@@ -1,6 +1,4 @@
-function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
+
 
 // Generate 25 page links
 const pagination = document.getElementById("pagination");
