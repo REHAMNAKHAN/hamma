@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.hintsnap.in/</loc>
+    <lastmod>2025-06-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hintsnap.in/About_us</loc>
+    <lastmod>2025-06-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hintsnap.in/Contact_us</loc>
+    <lastmod>2025-06-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hintsnap.in/Privacy_Policy</loc>
+    <lastmod>2025-06-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hintsnap.in/page1</loc>
+    <lastmod>2025-06-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hintsnap.in/page2</loc>
+    <lastmod>2025-06-17</lastmod>
+  </url>
+  <!-- Add more pages -->
+  <url>
+    <loc>https://www.hintsnap.in/page3</loc>
+    <lastmod>2025-06-17</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hintsnap.in/page4</loc>
+    <lastmod>2025-06-17</lastmod>
+  </url>
+</urlset>
+<!-- This is a sitemap for the Hintsnap website. It includes the homepage and several other pages. -->
+<!-- The lastmod tag indicates the last modification date of each page. -->
