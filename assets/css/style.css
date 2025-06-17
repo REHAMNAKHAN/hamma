@@ -17,7 +17,7 @@
       text-align: center;
       padding: 10px 20px;
       font-weight: bold;
-      position: fixed;
+      position: sticky;
       top: 0;
       z-index: 999;
     }
