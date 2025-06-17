@@ -48,4 +48,15 @@
         nav.classList.remove("active");
       }
     });
+    fetch('https://docs.google.com/spreadsheets/d/1km3SdNZgy-4X2gc-xaPwzLLwebsN643U--tq4tx8BOw/gviz/tq?tqx=out:json')
+      .then(res => res.text())
+      .then(text => {
+        const json = JSON.parse(text.substr(47).slice(0, -2));
+        const offerText = json.table.rows[0].c[0].v;  // Cell A1
+        document.getElementById('offer-banner').textContent = offerText;
+      })
+      .catch(err => {
+        document.getElementById('offer-banner').textContent = "Unable to load offer.";
+        console.error("Fetch error:", err);
+      });
     
