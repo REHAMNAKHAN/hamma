@@ -4,11 +4,11 @@
       box-sizing: border-box;
     }
 
-    body {
+   .body {
       font-family: 'Outfit', sans-serif;
       background-color: #fff;
       color: #000;
-      overflow-x: visible;
+      overflow-x: hidden;
     }
 
     #offer-banner {
