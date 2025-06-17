@@ -1,4 +1,3 @@
-/*      /404.html     404
 /page6     /comingsoon.html   200
 /page7     /comingsoon.html   200
 /page8     /comingsoon.html   200
@@ -19,3 +18,6 @@
 /page23    /comingsoon.html   200
 /page24    /comingsoon.html   200
 /page25    /comingsoon.html   200
+/*         /404.html          404
+# This file is used to redirect specific pages to a "coming soon" page
+# and to handle 404 errors for any other pages not specified.
