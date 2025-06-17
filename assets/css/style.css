@@ -150,7 +150,7 @@
     .responsive-video {
        width: 100%;
        height: auto;
-       max-height: 100vh; /* limits video height to viewport */
+       max-height: 50vh; /* limits video height to viewport */
        object-fit: cover; /* fills container, cropping if needed */
        border-radius: 16px;
     }
