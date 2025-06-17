@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    main {
+      font-family: 'Outfit', sans-serif;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff4ecd;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main>
+    <h1>Coming Soon 🚧</h1>
+    <p>We're working hard to launch this page. Stay tuned!</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="assets/script.js"></script>
+  <script>
+    // Load header and footer
+    async function loadComponent(id, path) {
+      const res = await fetch(path);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadComponent("header", "components/header.html");
+    loadComponent("footer", "components/footer.html");
+  </script>
+</body>
+</html>
