@@ -1,5 +1,5 @@
 # Redirects for specific pages to a "coming soon" page
-/* /404.html 404.html
+
 
 # This file is used to redirect specific pages to a "coming soon" page
 # and to handle 404 errors for any other pages not specified.
