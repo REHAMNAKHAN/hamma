@@ -1,7 +1,7 @@
 
 
 const pagination = document.getElementById("pagination");
-  const totalPages = 15;
+  const totalPages = 10;
   const pagesPerSet = 3;
   let currentStart = 1;
 
