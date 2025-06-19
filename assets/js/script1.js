@@ -1,8 +1,8 @@
 
 
 const pagination = document.getElementById("pagination");
-  const totalPages = 10;
-  const pagesPerSet = 3;
+  const totalPages = 6;
+  const pagesPerSet = 2;
   let currentStart = 1;
 
   function renderPagination(start) {
