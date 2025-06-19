@@ -1,23 +1,19 @@
-/page6.html     /comingsoon.html   404
-/page7.html     /comingsoon.html   404
-/page8.html     /comingsoon.html   404
-/page9.html     /comingsoon.html   200
-/page10.html    /comingsoon.html   200
-/page11.html    /comingsoon.html   200
-/page12.html    /comingsoon.html   200
-/page13.html    /comingsoon.html   200
-/page14.html    /comingsoon.html   200
-/page15.html    /comingsoon.html   200
-/page16.html    /comingsoon.html   200
-/page17.html    /comingsoon.html   200
-/page18.html    /comingsoon.html   200
-/page19.html    /comingsoon.html   200
-/page20.html    /comingsoon.html   200
-/page21.html    /comingsoon.html   200
-/page22.html    /comingsoon.html   200
-/page23.html    /comingsoon.html   200
-/page24.html    /comingsoon.html   200
-/page25.html    /comingsoon.html   200
+# Redirects for specific pages to a "coming soon" page
+/pages/page11.html    /comingsoon.html   200
+/pages/page12.html    /comingsoon.html   200
+/pages/page13.html    /comingsoon.html   200
+/pages/page14.html    /comingsoon.html   200
+/pages/page15.html    /comingsoon.html   200
+/pages/page16.html    /comingsoon.html   200
+/pages/page17.html    /comingsoon.html   200
+/pages/page18.html    /comingsoon.html   200
+/pages/page19.html    /comingsoon.html   200
+/pages/page20.html    /comingsoon.html   200
+/pages/page21.html    /comingsoon.html   200
+/pages/page22.html    /comingsoon.html   200
+/pages/page23.html    /comingsoon.html   200
+/pages/page24.html    /comingsoon.html   200
+/pages/page25.html    /comingsoon.html   200
 /*         /404.html          404
 # This file is used to redirect specific pages to a "coming soon" page
 # and to handle 404 errors for any other pages not specified.

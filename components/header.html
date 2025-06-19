@@ -11,9 +11,28 @@
   </div>
   <div class="nav" id="navMenu">
     <a href="https://hintsnap.in/">Home</a>
-    <a href="https://hintsnap.in/page1">Gift Cards</a>
+    <a href="https://hintsnap.in/pages/page1.html">Gift Cards</a>
     <a href="https://hintsnap.in/about_us">About Us</a>
     <a href="https://hintsnap.in/privacy_policy">Privacy Policy</a>
     <a href="https://hintsnap.in/contact_us">Contact Us</a>
   </div>
 </div>
+<script>
+  function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navMenu").classList.remove("active");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      const nav = document.getElementById("navMenu");
+      const burger = document.querySelector(".hamburger");
+      if (!nav.contains(e.target) && !burger.contains(e.target)) {
+        nav.classList.remove("active");
+      }
+    });
+</script>
