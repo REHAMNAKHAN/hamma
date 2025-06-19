@@ -24,7 +24,7 @@ const pagination = document.getElementById("pagination");
     // Page links
     for (let i = start; i < start + pagesPerSet && i <= totalPages; i++) {
       const link = document.createElement("a");
-      link.href = `https://hintsnap.in/pages/page${i}.html`;
+      link.href = `https://hintsnap.in/page${i}.html`;
       link.textContent = i;
       link.className = "page";
       pagination.appendChild(link);
