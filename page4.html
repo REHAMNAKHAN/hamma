@@ -42,9 +42,12 @@
       .then(res => res.text())
       .then(data => document.getElementById('header').innerHTML = data);
 
-    fetch('components/footer.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('footer').innerHTML = data);
+     fetch('components/header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+      initHeaderMenu(); // ✅ Initialize events after header is loaded
+    });
   </script>
 </body>
 </html>

@@ -31,36 +31,30 @@
       duration: 1
     });
 function initHeaderMenu() {
-  const nav = document.getElementById("navMenu");
-  const burger = document.querySelector(".hamburger");
-  const closeBtn = document.querySelector(".close-btn");
+    const nav = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
 
-  function toggleMenu() {
-    nav.classList.toggle("active");
-  }
-
-  function closeMenu() {
-    nav.classList.remove("active");
-  }
-
-  // Make toggle globally accessible for inline HTML use
-  window.toggleMenu = toggleMenu;
-
-  // Add click handlers
-  burger?.addEventListener("click", toggleMenu);
-  closeBtn?.addEventListener("click", closeMenu);
-
-  document.querySelectorAll(".nav a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!nav.contains(e.target) && !burger.contains(e.target)) {
-      closeMenu();
+    function toggleMenu() {
+      nav.classList.toggle("active");
     }
-  });
-}
 
+    function closeMenu() {
+      nav.classList.remove("active");
+    }
+
+    // Make toggle function globally available if needed
+    window.toggleMenu = toggleMenu;
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && !burger.contains(e.target)) {
+        closeMenu();
+      }
+    });
+}
 
 
     fetch('https://docs.google.com/spreadsheets/d/1km3SdNZgy-4X2gc-xaPwzLLwebsN643U--tq4tx8BOw/gviz/tq?tqx=out:json')
