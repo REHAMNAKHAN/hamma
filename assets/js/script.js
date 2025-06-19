@@ -31,7 +31,23 @@
       duration: 1
     });
 
-    
+     function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navMenu").classList.remove("active");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      const nav = document.getElementById("navMenu");
+      const burger = document.querySelector(".hamburger");
+      if (!nav.contains(e.target) && !burger.contains(e.target)) {
+        nav.classList.remove("active");
+      }
+    });
     fetch('https://docs.google.com/spreadsheets/d/1km3SdNZgy-4X2gc-xaPwzLLwebsN643U--tq4tx8BOw/gviz/tq?tqx=out:json')
       .then(res => res.text())
       .then(text => {

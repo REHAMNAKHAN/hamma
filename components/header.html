@@ -17,22 +17,3 @@
     <a href="https://hintsnap.in/contact_us">Contact Us</a>
   </div>
 </div>
-<script>
-  function toggleMenu() {
-      document.getElementById("navMenu").classList.toggle("active");
-    }
-
-    document.querySelectorAll(".nav a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navMenu").classList.remove("active");
-      });
-    });
-
-    document.addEventListener("click", (e) => {
-      const nav = document.getElementById("navMenu");
-      const burger = document.querySelector(".hamburger");
-      if (!nav.contains(e.target) && !burger.contains(e.target)) {
-        nav.classList.remove("active");
-      }
-    });
-</script>
