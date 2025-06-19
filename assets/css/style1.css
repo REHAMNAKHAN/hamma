@@ -5,6 +5,13 @@ body {
   background: #f9f9f9;
   color: #333;
 }
+.page-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  color: #ff4ecd;
+  font-weight: bold;
+}
 
 /* Header */
 
@@ -52,13 +59,7 @@ body {
   font-size: 0.9rem;
   color: #555;
 }
-.page-heading {
-  text-align: center;
-  font-size: 1.8rem;
-  margin: 40px 0 20px;
-  color: #ff4ecd;
-  font-weight: bold;
-}
+
 
 /* Pagination */
 .pagination {
