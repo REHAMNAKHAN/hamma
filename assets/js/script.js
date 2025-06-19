@@ -31,30 +31,27 @@
       duration: 1
     });
 function toggleMenu() {
-  const nav = document.getElementById("navMenu");
-  nav.classList.toggle("active");
+  document.getElementById("navMenu").classList.toggle("active");
 }
 
-// Close menu when a nav link is clicked
+function closeMenu() {
+  document.getElementById("navMenu").classList.remove("active");
+}
+
 document.querySelectorAll(".nav a").forEach(link => {
   link.addEventListener("click", () => {
-    document.getElementById("navMenu").classList.remove("active");
+    closeMenu();
   });
 });
 
-// Close menu when clicking outside
 document.addEventListener("click", (e) => {
   const nav = document.getElementById("navMenu");
   const burger = document.querySelector(".hamburger");
-
-  const clickedInsideNav = nav.contains(e.target);
-  const clickedBurger = burger.contains(e.target);
-
-  // If menu is open and click is outside nav and burger, close it
-  if (nav.classList.contains("active") && !clickedInsideNav && !clickedBurger) {
-    nav.classList.remove("active");
+  if (!nav.contains(e.target) && !burger.contains(e.target)) {
+    closeMenu();
   }
 });
+
 
     fetch('https://docs.google.com/spreadsheets/d/1km3SdNZgy-4X2gc-xaPwzLLwebsN643U--tq4tx8BOw/gviz/tq?tqx=out:json')
       .then(res => res.text())
