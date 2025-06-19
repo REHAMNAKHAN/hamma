@@ -1,19 +1,27 @@
-/pages/page1.html     /pages/page1.html   200
-/pages/page2.html     /pages/page2.html   200
-/pages/page3.html     /pages/page3.html   200
-/pages/page4.html     /pages/page4.html   200
-/pages/page5.html     /pages/page5.html   200
-/pages/page6.html     /pages/page6.html   200
-/pages/page7.html     /pages/page7.html   200
-/pages/page8.html     /pages/page8.html   200
-/pages/page9.html     /pages/page9.html   200
-/pages/page10.html    /pages/page10.html   200
-/pages/page11.html    /comingsoon.html   200
-/pages/page12.html    /comingsoon.html   200
-/pages/page13.html    /comingsoon.html   200
-/pages/page14.html    /comingsoon.html   200
-/pages/page15.html    /comingsoon.html   200
+/pages/page1.html     /pages/page1.html     200
+/pages/page2.html     /pages/page2.html     200
+/pages/page3.html     /pages/page3.html     200
+/pages/page4.html     /pages/page4.html     200
+/pages/page5.html     /pages/page5.html     200
+/pages/page6.html     /comingsoon.html      200
+/pages/page7.html     /comingsoon.html      200
+/pages/page8.html     /comingsoon.html      200
+/pages/page9.html     /comingsoon.html      200
+/pages/page10.html    /comingsoon.html      200
+/pages/page11.html    /comingsoon.html      200
+/pages/page12.html    /comingsoon.html      200
+/pages/page13.html    /comingsoon.html      200
+/pages/page14.html    /comingsoon.html      200
+/pages/page15.html    /comingsoon.html      200
+/pages/page16.html    /comingsoon.html      200
+/pages/page17.html    /comingsoon.html      200
+/pages/page18.html    /comingsoon.html      200
+/pages/page19.html    /comingsoon.html      200
+/pages/page20.html    /comingsoon.html      200
+/pages/page21.html    /comingsoon.html      200
+/pages/page22.html    /comingsoon.html      200
+/pages/page23.html    /comingsoon.html      200
+/pages/page24.html    /comingsoon.html      200
+/pages/page25.html    /comingsoon.html      200
 
-/*         /404.html          404
-# This file is used to redirect specific pages to a "coming soon" page
-# and to handle 404 errors for any other pages not specified.
+/*                    /404.html             404
