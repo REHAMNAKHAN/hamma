@@ -43,8 +43,11 @@
   <script>
     // Load header and footer
     fetch('components/header.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('header').innerHTML = data);
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+      initHeaderMenu(); // ✅ Initialize events after header is loaded
+    });
 
     fetch('components/footer.html')
       .then(res => res.text())
