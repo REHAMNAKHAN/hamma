@@ -30,27 +30,31 @@
       delay: 2.5,
       duration: 1
     });
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("active");
+function initHeaderMenu() {
+    const nav = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
+
+    function toggleMenu() {
+      nav.classList.toggle("active");
+    }
+
+    function closeMenu() {
+      nav.classList.remove("active");
+    }
+
+    // Make toggle function globally available if needed
+    window.toggleMenu = toggleMenu;
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && !burger.contains(e.target)) {
+        closeMenu();
+      }
+    });
 }
-
-function closeMenu() {
-  document.getElementById("navMenu").classList.remove("active");
-}
-
-document.querySelectorAll(".nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    closeMenu();
-  });
-});
-
-document.addEventListener("click", (e) => {
-  const nav = document.getElementById("navMenu");
-  const burger = document.querySelector(".hamburger");
-  if (!nav.contains(e.target) && !burger.contains(e.target)) {
-    closeMenu();
-  }
-});
 
 
     fetch('https://docs.google.com/spreadsheets/d/1km3SdNZgy-4X2gc-xaPwzLLwebsN643U--tq4tx8BOw/gviz/tq?tqx=out:json')
